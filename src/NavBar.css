@@ -1,0 +1,12 @@
+span {
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #c07d99;
+  color: white;
+}
+
+h2{
+  font-family: Georgia;
+  color: azure;
+}

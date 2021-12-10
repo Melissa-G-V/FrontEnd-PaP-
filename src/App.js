@@ -1,16 +1,16 @@
 import React, {useState} from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import "bootswatch/dist/minty/bootstrap.min.css";
 import { ClienteContext } from "./ClienteContext.js";
 
-import Header from "./Header.js";
+import NavBar from "./NavBar.js";
 import Listagem from "./Listagem.js";
 import UserLogin from "./UserLogin.js";
-import Form from "./Form.js";
-import FormTwo from "./FormTwo.js";
-import Reviews from "./Reviews.js";
+//import Form from "./Form.js";
+//import FormTwo from "./FormTwo.js";
+import Interesses from "./Interesses.js";
 import "./App.css";
-import Grafico2 from "./Grafico2.js";
+import Grafico from "./Grafico.js";
 
 
 
@@ -23,10 +23,10 @@ function App() {
   return (
     <ClienteContext.Provider value={{dados, setDados}}>
       <Router>
-        <Header />
+        <NavBar />
         <Switch>
           <Route path="/" exact>
-            <Form/>
+         
             <Listagem / >
 
           </Route>
@@ -34,10 +34,10 @@ function App() {
             <UserLogin />
           </Route>
           <Route path="/graph1">
-           <Grafico2/>
+            <Grafico/>
           </Route>
           <Route path="/review">
-           <Reviews/>
+           <Interesses/>
           </Route>
         </Switch>
       </Router>
